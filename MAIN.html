@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Toàn</title>
+    <link rel="icon" type="image/x-icon" href="avt.png">
+    <link rel="stylesheet" href="MAIN-css.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <link href='https://cdn.leanhduc.pro.vn/font-awesome/pro-5.15.3/css/all.css' rel='stylesheet' />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+    <!------------------------LOADER--------------------------->
+    <script>
+        var loader = function () {
+            setTimeout(function () {
+                $('#loader').css({ 'opacity': 0, 'visibility': 'hidden' });
+            }, 1000);
+        };
+        $(function () {
+            loader();
+        });
+    </script>
+    <style>
+        * {
+            /* reset lại margin và padding cho các tag */
+            margin: 0;
+            padding: 0;
+        }
+
+        #loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 99999;
+            width: 100%;
+            height: 100%;
+            background-color: #161C24;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .loader2 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 10;
+            width: 160px;
+            height: 100px;
+            margin-left: -80px;
+            margin-top: -50px;
+            border-radius: 5px;
+            background: #1e3f57;
+            animation: dot1_ 3s cubic-bezier(0.55, 0.3, 0.24, 0.99) infinite;
+        }
+
+        .loader2:nth-child(2) {
+            z-index: 11;
+            width: 150px;
+            height: 90px;
+            margin-top: -45px;
+            margin-left: -75px;
+            border-radius: 3px;
+            background: #3c517d;
+            animation-name: dot2_;
+        }
+
+        .loader2:nth-child(3) {
+            z-index: 12;
+            width: 40px;
+            height: 20px;
+            margin-top: 50px;
+            margin-left: -20px;
+            border-radius: 0 0 5px 5px;
+            background: #6bb2cd;
+            animation-name: dot3_;
+        }
+
+        @keyframes dot1_ {
+
+            3%,
+            97% {
+                width: 160px;
+                height: 100px;
+                margin-top: -50px;
+                margin-left: -80px;
+            }
+
+            30%,
+            36% {
+                width: 80px;
+                height: 120px;
+                margin-top: -60px;
+                margin-left: -40px;
+            }
+
+            63%,
+            69% {
+                width: 40px;
+                height: 80px;
+                margin-top: -40px;
+                margin-left: -20px;
+            }
+        }
+
+        @keyframes dot2_ {
+
+            3%,
+            97% {
+                height: 90px;
+                width: 150px;
+                margin-left: -75px;
+                margin-top: -45px;
+            }
+
+            30%,
+            36% {
+                width: 70px;
+                height: 96px;
+                margin-left: -35px;
+                margin-top: -48px;
+            }
+
+            63%,
+            69% {
+                width: 32px;
+                height: 60px;
+                margin-left: -16px;
+                margin-top: -30px;
+            }
+        }
+
+        @keyframes dot3_ {
+
+            3%,
+            97% {
+                height: 20px;
+                width: 40px;
+                margin-left: -20px;
+                margin-top: 50px;
+            }
+
+            30%,
+            36% {
+                width: 8px;
+                height: 8px;
+                margin-left: -5px;
+                margin-top: 49px;
+                border-radius: 8px;
+            }
+
+            63%,
+            69% {
+                width: 16px;
+                height: 4px;
+                margin-left: -8px;
+                margin-top: -37px;
+                border-radius: 10px;
+            }
+        }
+    </style>
+
+</head>
+<!----------Body------------->
+
+<body>
+    <div id="loader">
+        <div class="loader2"></div>
+        <div class="loader2"></div>
+        <div class="loader2"></div>
+    </div>
+    <div class="wrapper">
+        <header>
+            <a href="MAIN.html" class="logo">ORIAS</a>
+            <div class="find">
+                <div class="dk"></div>
+                <div class="btn-find"></div>
+            </div>
+            <div class="navigation">
+                <ul class="menu">
+                    <div class="close-btn"></div>
+                    <li class="menu-item"><a href="Page 1.html">STORE</a></li>
+                    <li class="menu-item">
+                        <a class="sub-btn" href="#">ABOUT</a>
+                        <ul class="sub-menu sub-menu-3">
+                            <li class="sub-item"><a href="https://www.facebook.com/ToanKoChepCode">FACEBOOK</a></li>
+                            <li class="sub-item"><a href="https://discord.gg/VDQdE6xp">DISCORD</a></li>
+                            <li class="sub-item"><a href="#">MESSENGER</a></li>
+                            <li class="sub-item"><a href="#">ZALO</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a class="sub-btn" href="page6.html">LOG IN</a>
+                        <ul class="sub-menu sub-menu-3">
+                            <li class="sub-item"><a href="login.html">ĐĂNG NHẬP</a></li>
+                            <li class="sub-item"><a href="#">ĐĂNG KÝ</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="menu-btn"></div>
+        </header>
+        <!----------MAIN---------->
+        <div style="padding: 37px;"></div>
+        <div class="huge-box">
+            <div class="big-box1">
+                <div class="box1">
+
+                </div>
+                <div class="box1">
+
+                </div>
+                <div class="box11">
+                    <div class="box-img">
+                        <img src="avt4.jpg" alt="avt1">
+                    </div>
+                    <div class="box-text">
+                        <div class="he">
+                            Khánh Toàn
+                        </div>
+                        <p class="mi">#0001</p>
+                    </div>
+                </div>
+                <div class="box12">
+                    <div class="cricle">
+                        <p>O</p>
+                    </div>
+                    <div class="cricle">
+                        <p>R</p>
+                    </div>
+                    <div class="cricle">
+                        <p>i</p>
+                    </div>
+                </div>
+            </div>
+            <div class="big-box2">
+                <div class="r-box1">
+                    <div class="mini-rbox1">
+                        <img src="pr7.jpg">
+                    </div>
+                    <div class="mini2-rbox1">
+                        <img src="pr10.jpg">
+                    </div>
+                </div>
+                <div class="r-box1-1 box-color">
+                    <div class="box-fb">
+                        <p>FAMOUS BRAND</p>
+                        <div class="offcial">
+                            <p>OFFICAL</p>
+                        </div>
+                    </div>
+                    <div class="box-brand">
+                        <div class="apple">
+                            <img src="apple-brand-logo-removebg-preview.png" alt="apple">
+                        </div>
+                        <div class="android">
+                            <img src="ANDROID BRAND.png" alt="">
+                        </div>
+                        <div class="addidas">
+                            <img src="NKIE BRAND.png" alt="">
+                        </div>
+                        <div class="shoes">
+                            <img src="ADIDAS.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="r-box1-2 box-color">
+                    <div class="address">
+                        <div class="box-vinh">
+                            <div class="cr"></div>
+                            <p>Vinh, VietNam</p>
+                        </div>
+                        <div class="sell">
+                            <div class="find">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                            <div class="ss">
+                                <p class="mn">+</p>
+                                <p class="text-nm"> Sell Something </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-product">
+                        <div class="product1">
+                            <div class="item">
+                                <div class="imagine box-zoom-out">
+                                    <img src="pr4.jpg" alt="">
+                                </div>
+                                <div class="gt">
+                                    <div class="gt-text">
+                                        <p class="money">
+                                            $1.599
+                                        </p>
+                                        <p class="pt">
+                                            Magic 2 Pro
+                                        </p>
+                                    </div>
+                                    <div class="btn">
+                                        <div class="view">
+                                            <p> VIEW </p>
+                                        </div>
+                                        <div class="more">
+                                            <p> MORE </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="imagine box-zoom-out">
+                                    <img src="pr9.jpg" alt="">
+                                </div>
+                                <div class="gt">
+                                    <div class="gt-text">
+                                        <p class="money">
+                                            $1.099
+                                        </p>
+                                        <p class="pt">
+                                            Max Changer
+                                        </p>
+                                    </div>
+                                    <div class="btn">
+                                        <div class="view">
+                                            <p> VIEW </p>
+                                        </div>
+                                        <div class="more">
+                                            <p> MORE </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="imagine box-zoom-out">
+                                    <img src="pr5.jpg" alt="">
+                                </div>
+                                <div class="gt">
+                                    <div class="gt-text">
+                                        <p class="money">
+                                            $2.500
+                                        </p>
+                                        <p class="pt">
+                                            SP Changer 10
+                                        </p>
+                                    </div>
+                                    <div class="btn">
+                                        <div class="view">
+                                            <p> VIEW </p>
+                                        </div>
+                                        <div class="more">
+                                            <p> MORE </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product2">
+                            <div class="item">
+                                <div class="imagine box-zoom-out">
+                                    <img src="pr7.jpg" alt="">
+                                </div>
+                                <div class="gt">
+                                    <div class="gt-text">
+                                        <p class="money">
+                                            $3.00
+                                        </p>
+                                        <p class="pt">
+                                            Pro Items 2023
+                                        </p>
+                                    </div>
+                                    <div class="btn">
+                                        <div class="view">
+                                            <p> VIEW </p>
+                                        </div>
+                                        <div class="more">
+                                            <p> MORE </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="imagine box-zoom-out">
+                                    <img src="pr11.jpg" alt="">
+                                </div>
+                                <div class="gt">
+                                    <div class="gt-text">
+                                        <p class="money">
+                                            $5.490
+                                        </p>
+                                        <p class="pt">
+                                            IBook Master 10
+                                        </p>
+                                    </div>
+                                    <div class="btn">
+                                        <div class="view">
+                                            <p> VIEW </p>
+                                        </div>
+                                        <div class="more">
+                                            <p> MORE </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="imagine box-zoom-out">
+                                    <img src="pr2.jpg" alt="">
+                                </div>
+                                <div class="gt">
+                                    <div class="gt-text">
+                                        <p class="money">
+                                            $8.600
+                                        </p>
+                                        <p class="pt">
+                                            Apple Watch 7
+                                        </p>
+                                    </div>
+                                    <div class="btn">
+                                        <div class="view">
+                                            <p> VIEW </p>
+                                        </div>
+                                        <div class="more">
+                                            <p> MORE </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="load-more">
+                      <p>  LOAD... </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
